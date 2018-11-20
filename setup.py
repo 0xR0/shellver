@@ -105,7 +105,7 @@ if __name__ == "__main__":
         install(FILE_PATH, EXEC_PATH)
         print "Installation finished"
         print "Files are installed under " + FILE_PATH
-        print "Run: shellver --help"
+        os.system('shellver how')
 
     elif args.uninstall and not (args.install or args.reinstall):
         # uninstall from the system
@@ -123,7 +123,7 @@ if __name__ == "__main__":
         install(FILE_PATH, EXEC_PATH)
         print "Reinstallation finished"
         print "Files are installed under " + FILE_PATH
-        print "Run: shellver --help"
+        os.system('shellver how')
 
     else:
         metadata(); print ""
