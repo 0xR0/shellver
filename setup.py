@@ -2,6 +2,7 @@ import argparse
 import os
 import stat
 import pip
+from time import sleep
 from sys import platform
 from shutil import copy2, rmtree
 from distutils.dir_util import copy_tree
@@ -105,6 +106,7 @@ if __name__ == "__main__":
         install(FILE_PATH, EXEC_PATH)
         print "Installation finished"
         print "Files are installed under " + FILE_PATH
+	sleep(2)
         os.system('shellver how')
 
     elif args.uninstall and not (args.install or args.reinstall):
@@ -123,6 +125,7 @@ if __name__ == "__main__":
         install(FILE_PATH, EXEC_PATH)
         print "Reinstallation finished"
         print "Files are installed under " + FILE_PATH
+	sleep(2)
         os.system('shellver how')
 
     else:
