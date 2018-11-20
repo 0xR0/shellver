@@ -16,7 +16,7 @@ Then install it:
 
  python setup.py -i
 
- run shellver -h or "shellver bash or perl {} python {} php {} ruby {} netcat {} xterm {} shell {} all".format (or)
+ run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
 
 #Example
 
