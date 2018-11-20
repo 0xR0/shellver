@@ -214,10 +214,11 @@ stty rows <num> columns <cols>
 (From within nmap)
 ------------
 !sh"""
+	if args.use == "how":	
+		print choice(color) + """ run "shellver msf" or "shellver shell" or "shellver spawn" """
 		
 		
-		
-	if args.use != "shell" and args.use != "spawn" and args.use != "msf":
+	if args.use != "shell" and args.use != "spawn" and args.use != "msf" and args.use != "how":
 		print choice(color) + 'Type "python shell.py -h" or "shell -h" for options'
 if __name__ == '__main__':
    main(sys.argv[1:])
