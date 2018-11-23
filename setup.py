@@ -1,3 +1,4 @@
+from __future__ import print_function
 import argparse
 import os
 import stat
@@ -18,9 +19,9 @@ EXEC_PATH_LINUX = "/usr/bin/shellver"
 
 
 def metadata():
-	print "Shellver <0.1> by {}".format(__author__)
-	print "Reverse Shell Cheat Sheet to do"
-	print "Other cyber-warrior.org"
+	print("Shellver <0.1> by {}".format(__author__))
+	print("Reverse Shell Cheat Sheet to do")
+	print("Other cyber-warrior.org")
 
 def dependencies(option):
     """install script dependencies with pip"""
@@ -29,7 +30,7 @@ def dependencies(option):
         with open("requirements.txt", "r") as requirements:
             dependencies = requirements.read().splitlines()
     except IOError:
-        print "requirements.txt not found, please redownload or do pull request again"
+        print("requirements.txt not found, please redownload or do pull request again")
         exit(1)
 
     
@@ -63,11 +64,11 @@ def uninstall(file_path, exec_path):
 
     if os.path.exists(file_path):
         rmtree(file_path)
-        print "Removed " + file_path
+        print("Removed " + file_path)
 
     if os.path.isfile(exec_path):
         os.remove(exec_path)
-        print "Removed " + exec_path
+        print("Removed " + exec_path)
 
 
 if __name__ == "__main__":
@@ -80,7 +81,7 @@ if __name__ == "__main__":
     if platform == "linux" or platform == "linux2":
         # Linux require root
         if os.getuid() != 0:
-            print "linux system requires root access for the installation"
+            print("linux system requires root access for the installation")
             exit(1)
 
         FILE_PATH = FILE_PATH_LINUX
@@ -89,23 +90,23 @@ if __name__ == "__main__":
     
 
     else:
-        print "Windows platform is not supported for installation"
+        print("Windows platform is not supported for installation")
         exit(1)
 
     if args.install and not (args.reinstall or args.uninstall):
         #full installation to the system
 
         if os.path.exists(FILE_PATH):
-            print "shellver is already installed under " + FILE_PATH
+            print("shellver is already installed under " + FILE_PATH)
             exit(1)
 
         if os.path.isfile(EXEC_PATH):
-            print "executable file exists under " + EXEC_PATH
+            print("executable file exists under " + EXEC_PATH)
             exit(1)
 
         install(FILE_PATH, EXEC_PATH)
-        print "Installation finished"
-        print "Files are installed under " + FILE_PATH
+        print("Installation finished")
+        print("Files are installed under " + FILE_PATH)
 	sleep(2)
         os.system('shellver how')
 
@@ -114,20 +115,20 @@ if __name__ == "__main__":
 
         uninstall(FILE_PATH, EXEC_PATH)
         
-        print "Uninstallation finished"
+        print("Uninstallation finished")
 
     elif args.reinstall and not (args.install or args.uninstall):
         # reinstall to the system
 
         uninstall(FILE_PATH, EXEC_PATH)
-        print "Removed previous installed files"
+        print("Removed previous installed files")
 
         install(FILE_PATH, EXEC_PATH)
-        print "Reinstallation finished"
-        print "Files are installed under " + FILE_PATH
+        print("Reinstallation finished")
+        print("Files are installed under " + FILE_PATH)
 	sleep(2)
         os.system('shellver how')
 
     else:
-        metadata(); print ""
+        metadata(); print("")
         parser.print_help()
