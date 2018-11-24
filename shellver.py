@@ -16,14 +16,14 @@ def resize():
 def shell():
 	color = ['\033[95m' , '\033[96m', '\033[36m' , '\033[94m' , '\033[92m' , '\033[93m' , '\033[91m']
 	lan = ([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])
-	wan = get('https://api.ipify.org/').text
+	wan = get('https://api.ipify.org').text
 	print choice(color) + "For lan enter 1:",(lan)
 	print choice(color) + "For wan enter 2:",(wan)
 	cw = raw_input("Which one do you want lan or wan : ")
         if cw == '1':
 		 ipp = ([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])
         if cw == '2':
-		 ipp = get('https://ipapi.co/ip/').text
+		 ipp = get('https://api.ipify.org').text
 	port = raw_input("Select listening port : ")
 
 	print choice(color) + "					|--Bash TCP--|"
@@ -63,14 +63,14 @@ def payload():
 	    
 	ven = raw_input("Enter Payload :")
 	lan = ([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])
-	wan = get('https://ipapi.co/ip/').text
+	wan = get('https://api.ipify.org').text
 	print choice(color) + "For lan enter 1:",(lan)
 	print choice(color) + "For wan enter 2:",(wan)
 	cw = raw_input("Which one do you want selected Payload lan or wan : ")
         if cw == '1':
 		 ipp = ([l for l in ([ip for ip in socket.gethostbyname_ex(socket.gethostname())[2] if not ip.startswith("127.")][:1], [[(s.connect(('8.8.8.8', 53)), s.getsockname()[0], s.close()) for s in [socket.socket(socket.AF_INET, socket.SOCK_DGRAM)]][0][1]]) if l][0][0])
         if cw == '2':
-		 ipp = get('https://ipapi.co/ip/').text
+		 ipp = get('https://api.ipify.org').text
 	port = raw_input("Select listening port : ")
 
 	
