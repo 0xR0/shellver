@@ -4,7 +4,7 @@
                                                  .:: cyber-warrior.org ::.
  
 
-#Install Note
+## Install Note
 
 Clone the repository:
 
@@ -17,6 +17,17 @@ Then install it:
  python setup.py -i
 
  run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
+
+
+
+## Docker Run Command
+
+```
+docker run --rm -idt --name babysploit xshuden/babysploit    # container is deleted when you're done
+OR
+docker run -idt --name babysploit xshuden/babysploit
+```
+
 
 #Example
 
