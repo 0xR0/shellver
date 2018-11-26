@@ -18,16 +18,13 @@ Then install it:
 
  run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
 
-
-
 ## Docker Run Command
 
 ```
-docker run --rm -idt --name babysploit xshuden/babysploit    # container is deleted when you're done
+docker run --rm -idt --name shellver xshuden/shellver    # container is deleted when you're done
 OR
-docker run -idt --name babysploit xshuden/babysploit
+docker run -idt --name shellver xshuden/shellver
 ```
-
 
 #Example
 
