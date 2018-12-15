@@ -17,6 +17,7 @@ Then install it:
  python setup.py -i
  
 For reinstall
+
  python setup.py -r
  
 run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
