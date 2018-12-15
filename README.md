@@ -18,7 +18,8 @@ Then install it:
  
 For reinstall
  python setup.py -r
- run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
+ 
+run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
 
 #Example
 
