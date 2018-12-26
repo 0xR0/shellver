@@ -4,7 +4,6 @@
 import argparse, sys, os, re, socket, subprocess
 from requests import get
 from random import choice
-from random import choice
 
 def resize():
 	os.system("resize -s 33 95")
