@@ -291,4 +291,4 @@ stty rows <num> columns <cols>
 if __name__ == '__main__':
    main(sys.argv[1:])
 exit()
-© 2020 GitHub, Inc.
+
