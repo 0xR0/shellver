@@ -1,10 +1,11 @@
+[![GitHub license](https://img.shields.io/github/license/0xR0/shellver.svg)](https://github.com/0xR0/shellver) [![GitHub stars](https://img.shields.io/github/stars/0xR0/shellver.svg)](https://github.com/0xR0/shellver/stargazers) [![GitHub forks](https://img.shields.io/github/forks/0xR0/shellver.svg)](https://github.com/0xR0/shellver/network) [![](https://images.microbadger.com/badges/image/xshuden/shellver.svg)](https://microbadger.com/images/xshuden/shellver "Get your own image badge on microbadger.com") [![](https://images.microbadger.com/badges/version/xshuden/shellver.svg)](https://microbadger.com/images/xshuden/shellver "Get your own version badge on microbadger.com")
 
                                                         .:: 0xR ::.
                                             .:: Reverse Shell Cheat Sheet Tool ::.
                                                  .:: cyber-warrior.org ::.
  
 
-#Install Note
+## Install Note
 
 Clone the repository:
 
@@ -21,6 +22,14 @@ For reinstall
  python setup.py -r
  
 run shellver -h or "shellver msf {} shell {} spawn".format (or)✔
+
+## Docker Run Command
+
+```
+docker run --rm -idt --name shellver xshuden/shellver    # container is deleted when you're done
+OR
+docker run -idt --name shellver xshuden/shellver
+```
 
 #Example
 
